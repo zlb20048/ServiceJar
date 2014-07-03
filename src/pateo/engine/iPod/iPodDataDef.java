@@ -60,8 +60,7 @@ public interface iPodDataDef
         ITASK_iPod_Check, // iPod Check
         // 认证相关任务Start******************************
         // #ifdef SUPPORT_IP
-        ITASK_IP_StartIDPS, ITASK_IP_SetFIDTokenValues, ITASK_IP_EndIDPS, ITASK_IP_IdentifyDeviceLingos, 
-        ITASK_IP_GetDevAuthenticationInfo, ITASK_IP_RetDevAuthenticationInfo,
+        ITASK_IP_StartIDPS, ITASK_IP_SetFIDTokenValues, ITASK_IP_EndIDPS, ITASK_IP_IdentifyDeviceLingos, ITASK_IP_GetDevAuthenticationInfo, ITASK_IP_RetDevAuthenticationInfo,
         // #endif
         // 认证相关任务End********************************
         ITASK_Change_AudioType, // 改变音频类型
@@ -69,22 +68,7 @@ public interface iPodDataDef
         ITASK_Connect_ChangeTypeWait, // 调用IPOD_Connect函数时等待音频类型改变完成
         ITASK_DeInit_ChangeTypeWait, // 调用IPOD_DeInit函数时等待音频类型改变完成
         // 协议相关任务Start******************************
-        ITASK_GetSupportedEventNotification, ITASK_SetEventNotification, ITASK_RequestRemoteUIMode,
-        ITASK_EnterRemoteUIMode, ITASK_ExitRemoteUIMode, ITASK_RequestiPodName, ITASK_RequestiPodSerialNum, 
-        ITASK_RequestiPodModelNum, ITASK_GetiPodOptionsForExtendedLingo, ITASK_GetiPodOptionsForSimpleRemoteLingo, 
-        ITASK_RequestExtendedLingoProtocolVersion, ITASK_RequestSimpleRemoteLingoProtocolVersion, 
-        ITASK_SetiPodPreferences, ITASK_ContextButtonStatus, ITASK_ImageButtonStatus, ITASK_VideoButtonStatus, 
-        ITASK_AudioButtonStatus, ITASK_GetCurrentPlayingTrackCahpterInfo, ITASK_GetIndexedPlayingTrackInfo, 
-        ITASK_GetIndexedPlayingTrackReleaseDate, ITASK_GetIndexedPlayingTrackGenre, 
-        ITASK_GetIndexedPlayingTrackArtWorkCount, ITASK_GetArtworkFormats, 
-        ITASK_GetTrackArtworkData, ITASK_ResetDBSelection, ITASK_SelectDBRecord, 
-        ITASK_GetNumberCategorizedDBRecords, ITASK_RetrieveCategorizedDBRecords, ITASK_GetPlayStatus, 
-        ITASK_GetCurrentPlayingTrackIndex, ITASK_GetIndexedPlayingTrackTitle, ITASK_GetIndexedPlayingTrackArtistName, 
-        ITASK_GetIndexedPlayingTrackAlbumName, ITASK_SetPlayStatusChangeNotification, ITASK_PlayCurrentSelection, 
-        ITASK_PlayControl, ITASK_GetTrackArtworkTimes, ITASK_GetShuffle, ITASK_SetShuffle, ITASK_GetRepeat, 
-        ITASK_SetRepeat, ITASK_SetDisplayImage, ITASK_GetMonoDisplayImageLimits, ITASK_GetNumPlayingTracks, 
-        ITASK_SetCurrentPlayingTrack, ITASK_GetColorDisplayImageLimits, ITASK_ResetDBSelectionHierarchy, 
-        ITASK_DigitalAudioLingoAccAck,
+        ITASK_GetSupportedEventNotification, ITASK_SetEventNotification, ITASK_RequestRemoteUIMode, ITASK_EnterRemoteUIMode, ITASK_ExitRemoteUIMode, ITASK_RequestiPodName, ITASK_RequestiPodSerialNum, ITASK_RequestiPodModelNum, ITASK_GetiPodOptionsForExtendedLingo, ITASK_GetiPodOptionsForSimpleRemoteLingo, ITASK_RequestExtendedLingoProtocolVersion, ITASK_RequestSimpleRemoteLingoProtocolVersion, ITASK_SetiPodPreferences, ITASK_ContextButtonStatus, ITASK_ImageButtonStatus, ITASK_VideoButtonStatus, ITASK_AudioButtonStatus, ITASK_GetCurrentPlayingTrackCahpterInfo, ITASK_GetIndexedPlayingTrackInfo, ITASK_GetIndexedPlayingTrackReleaseDate, ITASK_GetIndexedPlayingTrackGenre, ITASK_GetIndexedPlayingTrackArtWorkCount, ITASK_GetArtworkFormats, ITASK_GetTrackArtworkData, ITASK_ResetDBSelection, ITASK_SelectDBRecord, ITASK_GetNumberCategorizedDBRecords, ITASK_RetrieveCategorizedDBRecords, ITASK_GetPlayStatus, ITASK_GetCurrentPlayingTrackIndex, ITASK_GetIndexedPlayingTrackTitle, ITASK_GetIndexedPlayingTrackArtistName, ITASK_GetIndexedPlayingTrackAlbumName, ITASK_SetPlayStatusChangeNotification, ITASK_PlayCurrentSelection, ITASK_PlayControl, ITASK_GetTrackArtworkTimes, ITASK_GetShuffle, ITASK_SetShuffle, ITASK_GetRepeat, ITASK_SetRepeat, ITASK_SetDisplayImage, ITASK_GetMonoDisplayImageLimits, ITASK_GetNumPlayingTracks, ITASK_SetCurrentPlayingTrack, ITASK_GetColorDisplayImageLimits, ITASK_ResetDBSelectionHierarchy, ITASK_DigitalAudioLingoAccAck,
         // 协议相关任务End******************************
         // UI处理相关任务Start******************************
         ITASK_UITask_ReturnCategoryList,

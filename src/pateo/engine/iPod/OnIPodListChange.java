@@ -36,14 +36,14 @@ public interface OnIPodListChange
      * @see [类、类#方法、类#成员]
      */
     public void onIPodSongChange(int selectSize);
-    
+
     /**
      * 当ipod状态更改的时候提示
      * @param currentState 当前的播放状态
      * @see [类、类#方法、类#成员]
      */
     public void onIPodStateChange(int currentState);
-    
+
     /**
      * 当IPOD将要播放完成的时候
      * @see [类、类#方法、类#成员]

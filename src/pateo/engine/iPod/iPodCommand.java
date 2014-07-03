@@ -503,7 +503,7 @@ public class iPodCommand
         }
         if (mDataLayer.GetUseIDPS() == true)
         {// 是否使用IDPS
-        // iPodLogDefines.iPodLog(TAG, "mDataLayer.GetUseIDPS() == true");
+         // iPodLogDefines.iPodLog(TAG, "mDataLayer.GetUseIDPS() == true");
             mTxPacket.uPayLoadLen += 2;
         }
         // 初始化变量
@@ -546,7 +546,7 @@ public class iPodCommand
         // TransID
         if (mDataLayer.GetUseIDPS() == true)
         {// 是否使用IDPS
-        // iPodLogDefines.iPodLog(TAG, "mDataLayer.GetUseIDPS() == true");
+         // iPodLogDefines.iPodLog(TAG, "mDataLayer.GetUseIDPS() == true");
             if (bUseRxTransID == true)
             {
                 // m_TxBuf[m_TxBufLen++]=HIBYTE(mRxPacket.uTrans);
