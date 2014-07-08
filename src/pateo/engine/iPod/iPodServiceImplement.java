@@ -1139,8 +1139,10 @@ public class iPodServiceImplement extends iPodServiceInterface implements
                     {
                         isSendInfobar = true;
                     }
+                    Log.d(TAG, "mLauncherCallBack = " + mLauncherCallBack);
                     if (null != mLauncherCallBack)
                     {
+                        Log.d(TAG, "info.Title = " + info.Title);
                         mLauncherCallBack.musicInfoCallback(new String[] {
                             info.Title, info.Album, info.Artist});
                     }
@@ -1287,24 +1289,24 @@ public class iPodServiceImplement extends iPodServiceInterface implements
         }
         else
         {
-            // IPOD_UI_EVENT event = new IPOD_UI_EVENT();
-            // event.eventType = HANDLE_EVENT.EVENT_IPOD_PLAY_CONTROL;
-            // event.iWParam = IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY_PAUSE;
-            // event.iLParam = IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY;
-            // miPodOperate.iPOD_OperateHandle(event);
-            SP_IPOD_PlayPauseCurrentTrack();
+            IPOD_UI_EVENT event = new IPOD_UI_EVENT();
+            event.eventType = HANDLE_EVENT.EVENT_IPOD_PLAY_CONTROL;
+            event.iWParam = IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY_PAUSE;
+            event.iLParam = IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY;
+            miPodOperate.iPOD_OperateHandle(event);
+            // SP_IPOD_PlayPauseCurrentTrack();
         }
     }
 
     @Override
     public void actionPause()
     {
-        // IPOD_UI_EVENT event = new IPOD_UI_EVENT();
-        // event.eventType = HANDLE_EVENT.EVENT_IPOD_PLAY_CONTROL;
-        // event.iWParam = IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY_PAUSE;
-        // event.iLParam = IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PAUSE;
-        // miPodOperate.iPOD_OperateHandle(event);
-        SP_IPOD_PlayPauseCurrentTrack();
+        IPOD_UI_EVENT event = new IPOD_UI_EVENT();
+        event.eventType = HANDLE_EVENT.EVENT_IPOD_PLAY_CONTROL;
+        event.iWParam = IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY_PAUSE;
+        event.iLParam = IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PAUSE;
+        miPodOperate.iPOD_OperateHandle(event);
+        // SP_IPOD_PlayPauseCurrentTrack();
     }
 
     @Override

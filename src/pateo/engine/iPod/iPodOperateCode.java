@@ -2785,6 +2785,9 @@ public class iPodOperateCode
                             }
                             else if (mDataLayer.GetPlayState() != IPOD_PLAY_STATE.IPOD_PST_PLAY)
                             {
+                                // TODO add by lzx, delete audio play
+                                Log.d(TAG,
+                                    "come here ************************************************");
                                 mTxPacketPar.bPlayControlCmdCode =
                                     IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY_PAUSE;
                                 mTempTask.addLast(IPOD_MAIN_TASK.ITASK_PlayControl);
@@ -3781,9 +3784,10 @@ public class iPodOperateCode
             {
                 if (mDataLayer.GetPlayState() == IPOD_PLAY_STATE.IPOD_PST_PAUSE)
                 {
-                    mTxPacketPar.bPlayControlCmdCode =
-                        IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY_PAUSE;
-                    mTempTask.addLast(IPOD_MAIN_TASK.ITASK_PlayControl);
+                    // TODO add by lzx
+                    // mTxPacketPar.bPlayControlCmdCode =
+                    // IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY_PAUSE;
+                    // mTempTask.addLast(IPOD_MAIN_TASK.ITASK_PlayControl);
                 }
                 mTempTask.addLast(IPOD_MAIN_TASK.ITASK_GetNumPlayingTracks);
                 mTempTask.addLast(IPOD_MAIN_TASK.ITASK_GetCurrentPlayingTrackIndex);
@@ -4291,7 +4295,7 @@ public class iPodOperateCode
                 {
                     // play
                     mTxPacketPar.bPlayControlCmdCode =
-                        IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY_PAUSE;
+                        IPOD_PLAY_CONTROL_CMD_CODES.PARAM_PLAY;
 
                     if (!bIsUITask)
                     {
