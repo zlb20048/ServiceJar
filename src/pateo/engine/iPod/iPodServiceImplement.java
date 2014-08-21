@@ -626,13 +626,16 @@ public class iPodServiceImplement extends iPodServiceInterface implements
                 mTrackIndex = (SP_IPOD_TRACK_INDEX_TIME)data;
                 allSize = (int)mTrackIndex.uTotalIndex;
                 selectSize = (int)mTrackIndex.uIndex;
-
+                TraceManager.LogE(TAG, "allSize-> " + allSize + " selectSize -> " + selectSize);
                 // TODO add by lzx
                 monIPodListChange.onIPodSongChange(selectSize);
 
                 SendToInfoBar(InfoBarDefine.RF_TOTALNUM, data);
                 break;
             case SP_IPOD_REFRESH_ENUM.SP_IPOD_REF_PLAYING_INDEX:
+                // TODO add by lzx
+                TraceManager.LogE(TAG, "SP_IPOD_REF_PLAYING_INDEX arg1-> " + arg1);
+                monIPodListChange.onIPodSongChange(arg1);
                 SendToInfoBar(InfoBarDefine.RF_CURRENTNUM, arg1);
                 break;
             case SP_IPOD_REFRESH_ENUM.SP_IPOD_REF_PLAY_STATE:
@@ -959,8 +962,11 @@ public class iPodServiceImplement extends iPodServiceInterface implements
         mIsExit = true;
         ReadThreadStop();
         miPodOperate.iPodDeInit();
-        miPodJni.ipod_close();
-        miPodJni = null;
+        if (miPodJni != null)
+        {
+            miPodJni.ipod_close();
+            miPodJni = null;
+        }
         mbOpeniPodJNI = false;
         // delete the data from db
         mContext.getContentResolver().delete(IPodMediaStore.CONTENT_URI,
